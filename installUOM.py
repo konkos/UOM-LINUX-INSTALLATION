@@ -1,13 +1,10 @@
-import os
+import platform
 
 if __name__=="__main__":
 
-    uname = os.popen("uname -a").read()
-    print(uname)
+    u_name = platform.uname()
 
-    os_release = os.popen("cat /etc/os-release").read()
-    print(os_release)
+    linux_distro = u_name[3]
 
-    for line in os_release.split("\n"):
-        if line.startswith("ID="):
-            print(line)
+    for item in linux_distro.split():
+        print(item)
