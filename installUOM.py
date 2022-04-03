@@ -12,7 +12,7 @@ def remove_package_manager_list_files():
     os.system("rm dnf.txt")
 
 
-SYSTEM_TYPE = ""
+SYSTEM_TYPE = LinuxDistro.NOT_FOUND
 
 if __name__ == "__main__":
 
@@ -30,5 +30,5 @@ if __name__ == "__main__":
             # os.system("bash ./installUOM_DNF.sh")
             SYSTEM_TYPE = LinuxDistro.DNF
 
-    print(SYSTEM_TYPE)
+    print(SYSTEM_TYPE.value)
     # remove_package_manager_list_files()

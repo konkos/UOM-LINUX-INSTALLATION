@@ -1,3 +1,5 @@
 #!/bin/bash
 
-echo "DEBIAN"
+#add apt install script
+#eg sudo apt install program1, program2, ...
+echo "apt"
